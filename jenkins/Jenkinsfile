@@ -29,7 +29,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'pyinstaller --noconfirm --onefile --log-level DEBUG --clean sources/add2vals.py'
+                sh 'pyinstaller --noconfirm --onefile --clean sources/add2vals.py'
             }
             post {
                 success {
