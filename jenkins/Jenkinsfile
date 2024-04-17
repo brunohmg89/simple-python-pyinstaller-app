@@ -25,12 +25,11 @@ pipeline {
         stage ('Delivery') {
             agent {
                 docker { 
-                    image 'cdrx/pyinstaller-linux'
+                    image 'six8/pyinstaller-alpine'
                 }
             }
             steps {
-                sh 'pyi-makespec sources/add2vals.py'
-                sh 'pyinstaller --onefile sources/add2vals.spec'
+                sh 'pyinstaller --noconfirm --onefile --log-level DEBUG --clean sources/add2vals.spec'
             }
             post {
                 success {
