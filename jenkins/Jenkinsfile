@@ -6,7 +6,7 @@ pipeline {
                 docker { image 'python:alpine3.19' }
             }
             steps {
-                sh 'python -m py_compile App-Python/sources/add2vals.py App-Python/sources/calc.py'
+                sh 'python -m py_compile sources/add2vals.py sources/calc.py'
             }
         }
     }
