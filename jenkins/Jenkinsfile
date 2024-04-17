@@ -26,6 +26,7 @@ pipeline {
             agent {
                 docker { 
                     image 'six8/pyinstaller-alpine'
+                    args '--entrypoint='
                 }
             }
             steps {
